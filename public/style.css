@@ -65,7 +65,6 @@ main .boxes.image p{
     font-weight: 1000;
     text-transform: capitalize;
     margin:30px auto;
-    border: 5px solid blueviolet;
     color:whitesmoke;
     position: relative;
     float: right;
