@@ -1,0 +1,15 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "description": "covid-19 awareness",
+  "main": "main.js",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start":"main.js"
+  },
+  "author": "washington",
+  "license": "ISC"
+}
