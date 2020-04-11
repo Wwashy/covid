@@ -47,6 +47,9 @@ header{
     background-color: royalblue;
     transform: scale(1.1,1.1);
 }
+main{
+   text-align: center;
+}
 main .boxes{
     width: 100%;
     height:auto;
@@ -71,6 +74,8 @@ main .boxes.image p{
 h3,h4{
     text-transform: capitalize;
 }
+textarea,input{width: 80%;
+margin: 20px auto;}
 footer{
     background-color: black;
     text-align: center;

@@ -5,10 +5,12 @@
   "main": "main.js",
   "devDependencies": {},
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   },
   "scripts": {
-    "start":"main.js"
+    "start": "main.js"
   },
   "author": "washington",
   "license": "ISC"

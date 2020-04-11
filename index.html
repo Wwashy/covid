@@ -8,31 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
+
 <body>
-    <div class ="nav" id="navi">
+    <div class="nav" id="navi">
         <div onclick="close()" class="close">x</div>
-        <a href="#home">      <div>home</div></a>
-        <a href="#about">     <div>about</div></a>
-        <a href="#spread">    <div>spread</div></a>
-        <a href="#prevention"><div>prevention</div></a>
-        <a href="#cure">      <div>cure</div></a>
-        <a href="#contact">   <div>contact</div></a>
+        <a href="#home">
+            <div>home</div>
+        </a>
+        <a href="#about">
+            <div>about</div>
+        </a>
+        <a href="#spread">
+            <div>spread</div>
+        </a>
+        <a href="#prevention">
+            <div>prevention</div>
+        </a>
+        <a href="#cure">
+            <div>cure</div>
+        </a>
+        <a href="#contact">
+            <div>contact</div>
+        </a>
     </div>
     <header>
-        <div class="head-info">webWalk says</div> <div class="head-info">COVID-19</div>         
+        <div class="head-info">webWalk says</div>
+        <div class="head-info">COVID-19</div>
     </header>
     <main>
-        <div class="boxes image" id="home" style="background-image: url('/mask.jfif'); background-size: cover; height: 300px;background-position:center;">
+        <div class="boxes image" id="home"
+            style="background-image: url('/mask.jfif'); background-size: cover; height: 300px;background-position:center;">
             <P>stay at home covid-19 is real!</P>
         </div>
         <div class="boxes about" id="about">
             <h3>about</h3>
-            <p>Corona virus(covid-19) is an infectious disease caused by the new virus.For more information about corona virus dial *719#</p>
-            
+            <p>Corona virus(covid-19) is an infectious disease caused by the new virus.For more information about corona
+                virus dial *719#</p>
+
         </div>
         <div class="boxes spread" id="spread">
             <h3>how it spreads</h3>
-            <p>The disease spreads primarily by getting into contact with the infected person. 
+            <p>The disease spreads primarily by getting into contact with the infected person.
                 The diseas also spreads by touching the surfaces and then you touch your mouth, nose or eyes.
             </p>
 
@@ -40,32 +56,46 @@
         <div class="boxes prevention" id="prevention">
             <h3>prevention</h3>
             <p>There is no vaccine currently that can be used to prevent covid-19</p>
-            <p><h4>To help stop corona virus you need to do the following</h4>
-            <ul>
-                <li>Wash your hands regularly for atleast 20 seconds using soap and water or alcohol based hand sanitizer.</li>
-                <li>Maintain a social distance of atleast 1.5 meters</li>
-                <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze.</li>
-                <li>Stay home and avoid unnecessary movements</li>
-                <li>Self-isolate from other when feeling unwell or experiencing cpovid-19 like sysmptoms</li>
-                <li>Avoid touching your nose, mouth and eyes</li>
-            </ul>
+            <p>
+                <h4>To help stop corona virus you need to do the following</h4>
+                <ul>
+                    <li>Wash your hands regularly for atleast 20 seconds using soap and water or alcohol based hand
+                        sanitizer.</li>
+                    <li>Maintain a social distance of atleast 1.5 meters</li>
+                    <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze.
+                    </li>
+                    <li>Stay home and avoid unnecessary movements</li>
+                    <li>Self-isolate from other when feeling unwell or experiencing cpovid-19 like sysmptoms</li>
+                    <li>Avoid touching your nose, mouth and eyes</li>
+                </ul>
             </p>
         </div>
         <div class="boxes cure" id="cure">
             <h3>cure</h3>
-            <p>Currently there is no medicine or vaccine for covid-19, people may only be taken care of to help them.</p>
+            <p>Currently there is no medicine or vaccine for covid-19, people may only be taken care of to help them.
+            </p>
         </div>
         <div class="boxes contact" id="contact">
             <h3>contact</h3>
             <p>Dial for <b>719</b> covid-19 suspected cases</p>
         </div>
+
+        <form class="message" action="/message" method="POST">
+            <label for="name">Name</label><br>
+            <input type="text" name="sender" placeholder="name"> <br>
+            <label for="message">Leave me a message</label><br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="submit">
+        </form>
+
     </main>
+
     <footer>
         <p>@2020 covid-19 pandemic</p>
         <p>developed by: washington </p>
         <p>email:washingndi@gmail.com</p>
     </footer>
-   
+
 
 </body>
 
