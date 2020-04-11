@@ -7,20 +7,21 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     padding:0;
     margin: 0;
+    font-size: 20px;
 }
 header{
     background-color: darkblue;
     width: 100%;
     color: darkgray;
-    font-weight: 500;
     padding:10px;
-    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .head-info{    
-    text-decoration: wavy;
     font-weight: 1000;
     text-transform: unset;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .nav{
     width: 100%;
@@ -60,15 +61,16 @@ li{
     text-transform: initial;
 }
 main .boxes.image p{
-    font-size:1em;
-    align-self: center;
+    font-size:1.5em;
     font-weight: 1000;
     text-transform: capitalize;
-    width: 60%;
-    margin:60px auto;
+    margin:30px auto;
     border: 5px solid blueviolet;
-    font-size: 2em;
-    padding: 0px;
+    color:whitesmoke;
+    position: relative;
+    float: right;
+    width: 50.5%;
+
 }
     
 h3,h4{
