@@ -10,8 +10,19 @@
 </head>
 
 <body>
-    <div class="nav" id="navi">
-        <div onclick="close()" class="close">x</div>
+    <header>
+        <div class="menu" onclick="showMenu()">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+        </div>
+
+        <div class="head-info">webWalk says [COVID-19]</div>
+        <span class="head-info"></span>
+    </header>
+
+    <div class="nav" id="navi" onclick="closeMenu()">
+        <div class="close" id="close">x</div>
         <a href="#home">
             <div>home</div>
         </a>
@@ -31,10 +42,6 @@
             <div>contact</div>
         </a>
     </div>
-    <header>
-        <div class="head-info">webWalk says</div>
-        <div class="head-info">COVID-19</div>
-    </header>
     <main>
         <div class="boxes image" id="home"
             style="background-image: url('/COVID-19 CDC Image.jpg'); background-size: cover; height: 300px;background-position:center;">
@@ -49,7 +56,8 @@
         <div class="boxes spread" id="spread">
             <h3>how it spreads</h3>
             <p>The disease spreads primarily by getting into contact with the infected person.
-                The disease also spreads by touching the contaminated surfaces and then you touch your mouth, nose or eyes.
+                The disease also spreads by touching the contaminated surfaces and then you touch your mouth, nose or
+                eyes.
             </p>
 
         </div>

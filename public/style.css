@@ -18,6 +18,17 @@ header{
     top: 0;
     z-index: 1;
 }
+header .menu{
+    float: right;
+    margin: 20px 0;
+}
+header .menu .bars{
+    width: 30px;
+    height: 3px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 5px;
+}
 .head-info{    
     font-weight: 1000;
     text-transform: unset;
@@ -25,13 +36,16 @@ header{
 }
 .nav{
     width: 100%;
-    background-color:black;
+    background-color: darkblue;
     color: whitesmoke;
     padding:10px;
     margin: auto;
     text-align: center;
     align-self: center;
-    display:none;
+    position:fixed;
+    top: -1000px;
+    z-index: 1;
+    transition: 1s;
 }
 .nav div {
     width: 100%;
@@ -44,7 +58,14 @@ header{
     text-transform: capitalize;
     color: whitesmoke;
 }
+.nav a{
+    text-decoration: none;
+}
 .nav div:hover{
+    background-color: royalblue;
+    transform: scale(1.1,1.1);
+}
+.close:hover{
     background-color: royalblue;
     transform: scale(1.1,1.1);
 }
