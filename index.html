@@ -7,6 +7,8 @@
     <title>webWalk</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="update.js"></script>
 </head>
 
 <body>
@@ -46,6 +48,22 @@
         <div class="boxes image" id="home"
             style="background-image: url('/COVID-19 CDC Image.jpg'); background-size: cover; height: 300px;background-position:center;">
             <P>stay at home covid - 19 is real!</P>
+        </div>
+        <div class="boxes status">
+            <div class="global">
+                <label>global</label>
+                <div class="stats infection" ><span>infection</span><span id="infection">data</span></div>
+                <div class="stats recovered" ><span>recovered</span><span id="recovered">data</span></div>
+                <div class="stats death"><span>death</span><span id="death">data</span></div>
+            </div>
+            <br>
+            <div class="kenya">
+                <label>kenya</label>
+                <div class="stats infection" ><span>infection</span><span id="infection_ke">data_ke</span></div>
+                <div class="stats recovered" ><span>recovered</span><span id="recovered_ke">data_ke</span></div>
+                <div class="stats death"><span>death</span><span id="death_ke">data_ke</span></div>
+            </div>
+
         </div>
         <div class="boxes about" id="about">
             <h3>about</h3>

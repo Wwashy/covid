@@ -118,3 +118,33 @@ footer{
     font-weight: bold;
     padding: 20px;
 }
+.container{
+    text-align: center;
+    display: none;
+    padding: 15px;
+}
+.container.global{
+    display: block;
+
+}
+label{
+    text-transform: capitalize;
+}
+.stats{
+    box-sizing: border-box;
+    border:1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 2px;
+}
+.stats.recovered{
+    background-color: rgb(34, 158, 34);
+}
+.stats.death{
+    background-color:rgb(218, 69, 69);
+}
+.stats.infection{
+    background-color:rgb(197, 197, 56);
+}
