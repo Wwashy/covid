@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+    <script src="event.js"></script>
+    <script src="update.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="menu" onclick="showMenu()">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+        </div>
+
+        <div class="head-info">webWalk says [COVID-19]</div>
+        <span class="head-info"></span>
+    </header>
+
+    <div class="nav" id="navi" onclick="closeMenu()">
+        <div class="close" id="close">x</div>
+        <div class="btn" id="home_btn">
+            home
+        </div>
+        <div class = "btn" id="about_btn">
+            about
+        </div>
+        <div class="btn" id="spread_btn">
+            spread
+        </div>
+        <div class="btn" id="prevention_btn">
+            prevention
+        </div>
+        <div class="btn" id="cure_btn">
+            cure
+        </div>
+        <div class="btn" id="global_btn">
+           global
+        </div>
+        <div class="btn" id="kenya_btn">
+            kenya
+        </div>
+        <div class="btn" id="contact_btn">
+            contact
+        </div>
+    </div>
+    <form class="container global"  id="global" action="/global" method="POST">
+        <label for="">infection count globally</label><br>
+        <input type="text" name="infection_count" placeholder="infection update"><br>
+        <label for="">death count globally</label><br>
+        <input type="text" name="death_count" placeholder="death count"><br>
+        <label for="">survivers count globally</label><br>
+        <input type="text" placeholder="recoverd globally" name="recovery_count"><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container kenya" id="kenya" action="/kenya" method="POST">
+        <label for="">infection count in kenya</label><br>
+        <input type="text" name="infection_countkenya"><br>
+        <label for="">death count in kenya</label><br>
+        <input type="text" placeholder="death count"><br>
+        <label for="">recovery count in kenya</label><br>
+        <input type="text" placeholder="total recoverd"><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container about" id="about" action="/aboutcovid" method="POST">
+        <label for="covid">covid-19 about</label><br>
+        <textarea name="content" id="" cols="30" rows="10" placeholder="about covid"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container spread" id="spread" action="/spread" method="POST">
+        <label for="covid">covid-19 about</label><br>
+        <textarea name="content" id="" cols="30" rows="10" placeholder="spread"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container prevention" id="prevention" action="/prevention" method="POST">
+        <label for="covid">covid-19 prevention</label><br>
+        <textarea name="content" id="" cols="30" rows="10" placeholder="prevention"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container cure" id="cure" action="/cure" method="POST">
+        <label for="covid">covid-19 cure</label><br>
+        <textarea name="content id="" cols="30" rows="10" placeholder="cure"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form class="container contact" id="contact" action="/contact" method="POST">
+        <label for="covid">covid-19 contact</label><br>
+        <textarea name="content" id="" cols="30" rows="10" placeholder="contact"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+
+</html>

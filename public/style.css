@@ -52,7 +52,7 @@ header .menu .bars{
     height: 50px;
     padding: 15px;
 }
-.nav a div{
+.nav div{
     text-decoration: none;
     text-decoration-style: none;
     text-transform: capitalize;
@@ -61,7 +61,7 @@ header .menu .bars{
 .nav a{
     text-decoration: none;
 }
-.nav div:hover{
+.nav .btn:hover{
     background-color: royalblue;
     transform: scale(1.1,1.1);
 }
@@ -97,7 +97,7 @@ h3,h4{
     text-transform: capitalize;
 }
 textarea,input{
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     font-size: 16px;
     padding: 10px;
@@ -120,8 +120,12 @@ footer{
 }
 .container{
     text-align: center;
+    padding: 5px;
+    border: 1px solid grey;
     display: none;
-    padding: 15px;
+    margin:50px 10px;
+    border-radius: 5px;
+
 }
 .container.global{
     display: block;

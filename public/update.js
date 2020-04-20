@@ -26,6 +26,16 @@ $(document).ready(()=>{
             $('#recovered_ke').html(result.recovered);
             $('#death_ke').html(result.death);
         }
-    })
+    });
+
+    $.ajax({
+        url: '/getBlog',
+        type: 'POST',
+        dataType: 'json',
+        success:(result)=>{
+            console.log(result);
+        }
+        
+    });
 
 });
