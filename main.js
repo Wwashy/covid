@@ -114,28 +114,28 @@ app.post('/contact', (req, res) => {
 //presents data to the boxes
 //global
 app.post('/data', (req, res) => {
-    let sql = "SELECT * FROM global_stat WHERE stat_id = (SELECT MAX(stat_infection) FROM global_stat);";
+    let sql = "SELECT * FROM global_stat WHERE stat_infection= (SELECT MAX(stat_infection) FROM global_stat);";
     connection.query(sql, (err, result) => {
         if (err) throw err;
-        let data = {
-            infection: result[0].stat_infection,
-            recovered: result[0].stat_recovered,
-            death: result[0].stat_death
-        }
+        let data = {};        
+        data.infection = result[0].stat_infection;
+        data.recovered = result[0].stat_recovered;
+        data.death = result[0].stat_death;
+
         res.send(data);
-        console.log(data);
+        console.log(result);
     });
 });
 //global
 app.post('/dataKE', (req, res) => {
-    let sql = "SELECT * FROM kenya_stat WHERE stat_id = (SELECT MAX(stat_infection) FROM kenya_stat);";
+    let sql = "SELECT * FROM kenya_stat WHERE stat_infection = (SELECT MAX(stat_infection) FROM kenya_stat);";
     connection.query(sql, (err, result) => {
         if (err) throw err;
-        let data = {
-            infection: result[0].stat_infection,
-            recovered: result[0].stat_recovered,
-            death: result[0].stat_death
-        }
+        let data = {};
+        data.infection = result[0].stat_infection;
+        data.recovered = result[0].stat_recovered;
+        data.death = result[0].stat_death;
+
         res.send(data);
         console.log(result);
     });
@@ -153,12 +153,12 @@ app.post('/getBlog', (req, res) => {
     ";
     connection.query(sql, (err, result) => {
         if (err) throw err;
-        let data = {
-            about: result[0][0].content,
-            prevention: result[1][0].prevention_content.content,
-            spread: result[2][0].spread_content.content,
-            contact: result[3][0].contact_content.content
-        }
+        let data = {}
+        data.about = result[0];//[0].about_content.content;
+        data.prevention = result[1]; //[0].prevention_content.content;
+        data.spread = result[2]; //.spread_content.content;
+        data.contact = result[3];//.contact_content.content;
+
         console.log(result)
         res.send(data);
     });
