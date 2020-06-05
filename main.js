@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 let mysql = require('mysql');
 let bodyparser = require('body-parser');
-
+let statsdata = require('./scrap.js');
 
 //mysql://b306d28a03c4b7:3ecbb6ab@us-cdbr-iron-east-01.cleardb.net/heroku_76b072eab9306cc?reconnect=true
 
@@ -118,26 +118,26 @@ app.post('/data', (req, res) => {
     connection.query(sql, (err, result) => {
         if (err) throw err;
         let data = {};        
-        data.infection = result[0].stat_infection;
-        data.recovered = result[0].stat_recovered;
-        data.death = result[0].stat_death;
+        data.infection = statsdata.statssGlobal.gcases;//result[0].stat_infection;
+        data.recovered =statsdata.statssGlobal.grecovery; //result[0].stat_recovered;
+        data.death = statsdata.statssGlobal.gdeath;//result[0].stat_death;
 
         res.send(data);
-        console.log(result);
+        console.log(data);
     });
 });
-//global
+//kenya
 app.post('/dataKE', (req, res) => {
     let sql = "SELECT * FROM kenya_stat WHERE stat_infection = (SELECT MAX(stat_infection) FROM kenya_stat);";
     connection.query(sql, (err, result) => {
         if (err) throw err;
         let data = {};
-        data.infection = result[0].stat_infection;
-        data.recovered = result[0].stat_recovered;
-        data.death = result[0].stat_death;
+        data.infection =statsdata.statssKenya.kcases; //result[0].stat_infection;
+        data.recovered =statsdata.statssKenya.krecovery; //result[0].stat_recovered;
+        data.death =statsdata.statssKenya.kdeath; //result[0].stat_death;
 
         res.send(data);
-        console.log(result);
+       console.log(data);
     });
 });
 
@@ -158,8 +158,6 @@ app.post('/getBlog', (req, res) => {
         data.prevention = result[1]; //[0].prevention_content.content;
         data.spread = result[2]; //.spread_content.content;
         data.contact = result[3];//.contact_content.content;
-
-        console.log(result)
         res.send(data);
     });
 });
