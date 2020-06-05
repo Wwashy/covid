@@ -1,41 +1,44 @@
-$(document).ready(()=>{
+$(document).ready(() => {
     let devDiv = document.createElement("div");
-    devDiv.setAttribute("class","development");
-    $()
-    //updates the statistics
-    $.ajax({
-        url: '/data',
-        type: 'POST',
-        dataType: 'json',
-        success:(result)=>{
-            console.log(result);
-            $('#infection').html(result.infection);
-            $('#recovered').html(result.recovered);
-            $('#death').html(result.death);
-        }
-    });
+    devDiv.setAttribute("class", "development");
 
-    //kenya
-    $.ajax({
-        url: '/dataKE',
-        type: 'POST',
-        dataType: 'json',
-        success:(result)=>{
-            console.log(result);
-            $('#infection_ke').html(result.infection);
-            $('#recovered_ke').html(result.recovered);
-            $('#death_ke').html(result.death);
-        }
-    });
+    setInterval(() => {
+        //updates the statistics
+        $.ajax({
+            url: '/data',
+            type: 'POST',
+            dataType: 'json',
+            success: (result) => {
+                console.log(result);
+                $('#infection').html(result.infection);
+                $('#recovered').html(result.recovered);
+                $('#death').html(result.death);
+            }
+        });
 
-    $.ajax({
-        url: '/getBlog',
-        type: 'POST',
-        dataType: 'json',
-        success:(result)=>{
-            console.log(result);
-        }
-        
-    });
+        //kenya
+        $.ajax({
+            url: '/dataKE',
+            type: 'POST',
+            dataType: 'json',
+            success: (result) => {
+                console.log(result);
+                $('#infection_ke').html(result.infection);
+                $('#recovered_ke').html(result.recovered);
+                $('#death_ke').html(result.death);
+            }
+        });
+
+        $.ajax({
+            url: '/getBlog',
+            type: 'POST',
+            dataType: 'json',
+            success: (result) => {
+                console.log(result);
+            }
+
+        });
+
+    },30000);
 
 });
